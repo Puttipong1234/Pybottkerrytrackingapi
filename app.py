@@ -14,7 +14,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 
 app = Flask(__name__)
 
-@app.route("api/kerry/") # /api/kerry?tracking_number="KERPU071401717"
+@app.route("/api/kerry/") # /api/kerry?tracking_number="KERPU071401717"
 def kerry():
     tracking_number = request.args.get('tracking_number')
     r = Get_data_by_tracking(tracking_number=tracking_number,driver=driver)
