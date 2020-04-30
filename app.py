@@ -1,6 +1,8 @@
 import os
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
+
 from selenium import webdriver
 
 from Kerry import Get_data_by_tracking
@@ -13,6 +15,8 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+app.config['JSON_AS_ASCII'] = False
 
 @app.route("/api/kerry/") # /api/kerry?tracking_number="KERPU071401717"
 def kerry():
