@@ -45,17 +45,11 @@ def Get_data_by_tracking(tracking_number,driver):
                 info.append(r)
             
             res["info"] = info
-            driver.close()
-            driver.quit()
             return res
         except :
-            driver.close()
-            driver.quit()
             return "Shipment Not Found!"
     
     except :
-        driver.close()
-        driver.quit()
         return "server not ready Please try agian"
         
         

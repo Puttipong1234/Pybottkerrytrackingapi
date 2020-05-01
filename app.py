@@ -13,6 +13,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+# driver = webdriver.Chrome('C:/Users/SAMPLE/Downloads/chromedriver_win32/chromedriver.exe')
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -32,4 +33,4 @@ def kerry():
     
 
 # if __name__ == "__main__":
-#     app.run(port=8000,debug=True)
+#     app.run()
