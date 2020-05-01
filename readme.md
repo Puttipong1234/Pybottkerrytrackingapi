@@ -3,6 +3,8 @@
 เหมาะสำหรับในกรณีเว็บที่มีการผสมผสานการทำงาน Javascript ไม่สามารถ request แบบธรรมดาได้
 สามารถนำไปใส่งานกับ Web track พัสดุทั่วๆไปได้ เช่น scg express / dhl express / lazada express และอื่นๆ
 
+ทดลอง https://kerryapi.herokuapp.com/api/kerry/?tracking_number=<เลขพัสดุ>
+
 ![alt text](https://i.ibb.co/YBB8xTk/4.png)
 
 ## วิธีการใช้งาน
