@@ -18,10 +18,13 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 app.config['JSON_AS_ASCII'] = False
 
-@app.route("/api/kerry/") # /api/kerry?tracking_number="KERPU071401717"
+@app.route("/api/kerry/")
 def kerry():
+    # step 1 ทำการรับ args เลขพัสดุ มาจาก url ที่ใช้เรียก เช่น /api/kerry?tracking_number="123456789"
     tracking_number = request.args.get('tracking_number')
+    # step 2 ทำการนำค่าที่รับมาจาก url ใส่ลงใน function จากไฟล์ Kerry.py
     r = Get_data_by_tracking(tracking_number=tracking_number,driver=driver)
+    # step 3 ส่งค่าที่ได้จากการค้นหา เลขพัสดุ กลับไปแสดงที่ client side
     return jsonify(r)
 
 # if __name__ == "__main__":
