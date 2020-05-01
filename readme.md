@@ -3,7 +3,7 @@
 เหมาะสำหรับในกรณีเว็บที่มีการผสมผสานการทำงาน Javascript ไม่สามารถ request แบบธรรมดาได้
 สามารถนำไปใส่งานกับ Web track พัสดุทั่วๆไปได้ เช่น scg express / dhl express / lazada express และอื่นๆ
 
-![alt text](https://ibb.co/600bkJP)
+![alt text](https://i.ibb.co/YBB8xTk/4.png)
 
 ## วิธีการใช้งาน
 1. cmd > git clone https://github.com/Puttipong1234/Pybottkerrytrackingapi.git
