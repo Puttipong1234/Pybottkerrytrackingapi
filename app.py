@@ -23,9 +23,13 @@ def kerry():
     # step 1 ทำการรับ args เลขพัสดุ มาจาก url ที่ใช้เรียก เช่น /api/kerry?tracking_number="123456789"
     tracking_number = request.args.get('tracking_number')
     # step 2 ทำการนำค่าที่รับมาจาก url ใส่ลงใน function จากไฟล์ Kerry.py
-    r = Get_data_by_tracking(tracking_number=tracking_number,driver=driver)
+    try:
+        r = Get_data_by_tracking(tracking_number=tracking_number,driver=driver)
+        return jsonify(r)
+    except:
+        return jsonify("ขออภัยคะ server กำลังปิดปรับปรุง")
     # step 3 ส่งค่าที่ได้จากการค้นหา เลขพัสดุ กลับไปแสดงที่ client side
-    return jsonify(r)
+    
 
 # if __name__ == "__main__":
 #     app.run(port=8000,debug=True)

@@ -50,6 +50,7 @@ def Get_data_by_tracking(tracking_number,driver):
             return "Shipment Not Found!"
         
     finally:
+        driver.close()
         driver.quit()
         
 
